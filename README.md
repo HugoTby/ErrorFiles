@@ -1,39 +1,20 @@
-# nginx-error-pages
-Make your nginx error pages look great
+# Error Pages
+Add error pages to your virtual machines !
 
 ## Installation
+Go to the `html` file and run the following command
 ```bash
-mkdir -p /srv/http/default
-git clone https://github.com/denysvitali/nginx-error-pages /srv/http/default
-mkdir /etc/nginx/snippets/
-ln -s /srv/http/default/snippets/error_pages.conf /etc/nginx/snippets/error_pages.conf
-ln -s /srv/http/default/snippets/error_pages_content.conf /etc/nginx/snippets/error_pages_content.conf
+mkdir /errors
 ```
-Then add to each of your vhosts the following:
-```
-include snippets/error_pages.conf;
-```
+This folder will contain the HTML files of our errors.
 
-Example:
-```nginx
-$ cat /etc/nginx/conf.d/plex.conf 
-
-server {
-        listen       80;
-        listen       [::]:80;
-        listen       443 ssl http2;
-        listen       [::]:443 ssl http2;
-        server_name  plex.sv1 plex.sv1.lnet;
-        include snippets/ssl.conf;
-        include snippets/error_pages.conf; # <== This
-        root         /usr/share/nginx/html;
-
-        location / {
-                include snippets/reverse-proxy.conf;
-                proxy_pass https://127.0.0.1:32400;
-        }
-}
+Now, still in the `html` folder, run the following commands
+```bash
+mkdir /_errors
 ```
+This will allow us to access the CSS of HTML files
+
+
 
 
 ## Screenshots
