@@ -2,6 +2,13 @@
 Add error pages to your virtual machines !
 
 ## Installation
+
+First, run the following command: `cd /etc/apache2/conf-enabled`
+Open the `localized-error-pages.conf' file and drag the contents of the folder just below the first default errors.
+
+### Debian view
+![Debian conf view](https://media.discordapp.net/attachments/733366929561092157/1082555021427736586/image.png?width=1115&height=603)
+
 Go to the `html` file and run the following command
 ```bash
 mkdir /errors
@@ -17,6 +24,7 @@ Don't forget to restart the apache service.
 ```bash
 service apache2 restart
 ```
+The last step is to drag and drop the content of this repository into the folders you just created.
 
 Once the installation is complete, have fun testing your error pages! Here is an example code to test these pages.
 
