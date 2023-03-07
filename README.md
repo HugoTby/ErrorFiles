@@ -4,7 +4,7 @@ Add error pages to your virtual machines !
 ## Installation
 
 First, run the following command: `cd /etc/apache2/conf-enabled`
-Open the `localized-error-pages.conf' file and drag the contents of the folder just below the first default errors.
+Open the `localized-error-pages.conf` file and drag the contents of the folder just below the first default errors.
 
 ### Debian view
 ![Debian conf view](https://media.discordapp.net/attachments/733366929561092157/1082555021427736586/image.png?width=1115&height=603)
