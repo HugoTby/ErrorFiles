@@ -30,12 +30,12 @@ Once the installation is complete, have fun testing your error pages! Here is an
 
 ```php
 <?php
-// Récupérer l'adresse IP de l'utilisateur
+// Recover the user's IP address.
 $ip = $_SERVER['REMOTE_ADDR'];
 
-// Vérifier si l'adresse IP de l'utilisateur est différente de ALLOWED_IP
+// Check if the user's IP address is different from ALLOWED_IP.
 if ($ip !== 'ALLOWED_IP') {
-    // Rediriger l'utilisateur vers une page d'erreur ou afficher un message
+    // Redirect the user to an error page or display a message.
     header('Location: /errors/403.html');
     exit;
 }
